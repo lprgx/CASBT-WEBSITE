@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  scroll-behavior: smooth;
+  text-decoration: none;
+
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  height: 100vh;
+}
+
+header .titre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: "Kaisei Decol-Bold", serif;
+  font-weight: 600;
+  font-size: 17vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+header #titre::after {
+  position: relative;
+  right: 0;
+  animation: blink 1s step-end infinite;
+}
+
+
+
+header video {
+  width: 100%;
+  /*permet à l'image de suivre les formats*/
+  opacity: 0.9;
+  height: 100vh;
+  z-index: 000;
+  object-fit: cover;
+}
+
+.btnBurger .line{
+  background-color: rgb(0, 225, 255);
+}
+
+.explication {
+  color: black;
+
+  width: 100%;
+  background: linear-gradient(90deg, rgba(53, 46, 171, 1) 0%, rgba(125, 125, 255, 1) 35%, rgba(97, 135, 255, 0.6112570028011204) 100%);
+  padding: 10vh;
+  margin-top: 10px;
+}
+
+.explication .container {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 30px;
+}
+
+
+.explication .container .text-container {
+  padding: 20px;
+  font-family: Dejavu Sans, Arial, Verdana, sans-serif;
+}
+.explication .container .text-container h1{
+  background-color: #116ab133;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+
+.explication .container .text-container p{
+  padding: 20px;
+  text-align: justify;
+}
+
+
+#profiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5vh;
+  justify-content: center;
+  color: var(--color-black);
+  margin: 40px auto;
+  flex-grow: 1;
+  text-align: center;
+  width: 80%;
+  font-family: Roboto-Bold, Helvetica;
+}
+
+
+
+#profiles .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color:   var(--color-cards);
+  border-radius: 30px;
+  padding: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+  box-shadow: 5px 5px 10px #a9a8a8;
+}
+
+#profiles .card:hover {
+  transform: scale(1.08);
+}
+
+#profiles .card:first-child {
+  grid-column: 1 / 4;
+  grid-row: 1;
+  width: 100%;
+}
+
+#profiles .card .infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+
+#profiles .card .nom {
+  font-weight: 700;
+  font-size: 22px;
+  transition: color 0.3s;
+}
+
+#profiles .card .titre {
+  font-size: 13px;
+  color: var(--color-grey-3);
+}
+
+#profiles .card:hover .nom,
+#profiles .icon a:hover {
+  color: var(--color-blue1);
+}
+
+#profiles .card .icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+}
+
+#profiles .icon a {
+  text-decoration: none;
+  color: var(--color-black);
+  margin: 5px;
+  transition: color 0.3s;
+}
+
+@media screen and (max-width: 950px) {
+
+  #profiles {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  header .titre{
+    font-size: 13vh;
+  }
+
+  .explication {
+    padding: 2vh;
+  }
+
+  .explication .container .text-container p{
+    text-align: start;
+  }
+
+}

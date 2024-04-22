@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body{
+  background-color: #e6f0ff;
+}
+
+header .entete {
+  width: 100%;
+  /*permet à l'image de suivre les formats*/
+  opacity: 0.8;
+  height: 100vh;
+  z-index: 000;
+
+  object-fit: cover;
+}
+#back {
+  background-color: rgba(158, 194, 244, 1);
+  padding: 60px;
+  color: rgba(51, 102, 157, 1);
+  margin: 1% auto;
+}
+
+header .text {
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  color: white;
+  width: 70%;
+  font-size: 160%;
+  font-family: "Kaisei Decol", serif;
+}
+.imgactu {
+  background-color: #9ec2f4;
+  width: 100%;
+  /*permet à l'image de suivre les formats*/
+  height: 30vh;
+  z-index: -6;
+  opacity: 80%;
+  object-fit: cover;
+}
+.text {
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  color: var(--color-white);
+  width: 70%;
+  font-size: 160%;
+}
+
+#pres-actualite {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pres-accueil {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+#divCarte {
+  background-color: #9ec2f4;
+  margin: 1% auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  text-align: center;
+  border-radius: 30px 30px 30px 30px;
+  box-shadow: 5px 5px 10px #a9a8a8;
+}
+
+
+#map {
+  z-index: 0;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 30px 30px 30px 30px;
+  pointer-events: none;
+}
+
+#divCarte:active{
+  pointer-events: auto;
+}
+
+.video-slide {
+  position: absolute;
+  width: 100%;
+}
+/*Cards*/
+
+.card{
+  display: flex;
+  background-color: #9ec2f4;
+  border-radius: 65px 0px 65px 0px;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 1%; 
+  transition: all 0.3s ease-in-out;
+  box-shadow: 5px 5px 10px #a9a8a8;
+}
+.card:hover{
+  transform: scale(1.03);
+}
+.Tcard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5%;
+}
+
+.textCard{
+  position: relative;
+  color: white;
+  width: 70%;
+  font-size: 100%;
+}
+
+.titreCard{
+  position: relative;
+  color: white; 
+  width: 70%;
+  font-size: 160%;
+}
+.SCard{
+  color: rgba(51, 102, 157, 1);
+  width: 70%;
+  font-size: 100%;
+  margin-left: 70%;
+}
+
+.imgNat{
+  border-radius: 65px 0px 65px 0px;
+  z-index: 0; 
+  width: 38%;
+  height: 50vh;
+  position: relative;
+  object-fit: cover;
+}
+
+
+/*div tourisme*/
+
+.portfolios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2%;
+  margin: 1% 5%;
+  margin-bottom: 3%;
+}
+
+.portfolios .portfolio-item {
+  position: relative;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.portfolios .portfolio-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #a9a8a8;
+}
+
+.portfolios .portfolio-item .hover-items {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.4s ease-in-out;
+}
+
+.portfolios .portfolio-item .hover-items h3 {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+}
+
+.portfolios .portfolio-item .hover-items h3 a {
+  color: white;
+  vertical-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolios .portfolio-item .hover-items h3:hover a {
+  color: var(--color-grey-6);
+}
+
+
+.portfolio-item:hover .hover-items {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+.portfolios .portfolio-item:hover {
+  transform: scale(1.03);
+}
+
+
+
+/*Responsivité*/
+
+@media (max-width: 950px) {
+  #grpeTer {
+    margin-top: 10vh;
+  }
+
+  #territoireBox, #preserverBox {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  #volcan, #cascade {
+    display: none;
+  }
+
+  #CarteEntete {
+    font-size: 90%;
+  }
+
+  header .text {
+    font-size: 90%;
+  }
+
+  .text {
+    font-size: 90%;
+  }
+
+  .portfolios {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 2%;
+  }
+
+  .card{
+    flex-direction: column;
+    width: 70%;
+    margin-bottom: 5%;
+  }
+  .imgNat{
+    width: 100%;
+    height: 30vh;
+  }
+  .titreCard{
+    font-size: 100%;
+    margin-top: 5%;
+  }
+  .textCard{
+    font-size: 60%;
+    width: 80%;
+    margin-bottom: 5%;
+  }
+  .SCard{
+    font-size: 60%;
+    margin-left: 0%;
+  }
+}

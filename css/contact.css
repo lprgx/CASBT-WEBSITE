@@ -1,0 +1,177 @@
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/contact_background.jpg");
+  background-size: cover;
+  opacity: 60%;
+  z-index: -2;
+}
+header{
+  height: 20vh;
+}
+
+
+main{
+  display: block;
+  align-items: center;
+  
+}
+#infos{
+  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3vh;
+  max-width: 100%;
+  margin: 2% 20%;
+}
+.card{
+  background-color: rgba(0, 0, 0, 0.747);
+  font-family: "Montserrat", sans-serif;
+  border-radius: 30px;
+  padding: 20px;
+  min-height: 22vh;
+  color: white;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+
+}
+.card h3{
+  text-transform: uppercase;
+}
+
+
+form {
+  position: relative;
+  flex: 1;
+  background: rgba(223, 221, 221, 0.3);
+  padding: 1rem 1rem;
+  width: 50%;
+  min-width: 400px;
+  height: 600px;
+  border-radius: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.429);
+  text-align: center;
+  backdrop-filter: blur(7px);
+  margin: 0 auto ;
+  margin-top: 15%;
+  ;
+}
+.titreFormulaire {
+  color: black;
+  font-weight: 600;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+input,
+.message {
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+  font-family: "Kaisei Decol-Bold", serif;
+  width: 85%;
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s;
+  margin-bottom: 20px;
+  color: black;
+  font-weight: bolder;
+  box-sizing: border-box;
+}
+::placeholder {
+  color: black;
+  font-weight: 100;
+}
+form input:hover,
+.message:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+input:focus {
+  border: none;
+}
+.message {
+  
+  height: 170px;
+  border-radius: 15px;
+  resize: none;
+  font-size: 14px;
+  min-width: 25%;
+}
+input[type="submit"] {
+  color: black  ;
+  margin-top: 10px;
+  transition: all 0.5s;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: var(--color-blue0);
+  color  :white;
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.7);
+}
+
+#infos .card:hover {
+  transform: scale(1.08);
+}
+
+a 
+{ 
+ text-decoration:none; 
+ color: white;
+} 
+
+header .TitreContact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-white);
+  height: 17vh;
+  font-family: "Kaisei Decol-Bold", serif;
+  font-weight: 600;
+  font-size: 16vh;
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 100%;
+}
+
+header #TitreContact::after {
+  position: relative;
+  right: 0;
+  animation: blink 1s step-end infinite;
+}
+
+@media screen and (max-width: 950px) {
+
+  header .TitreContact{
+    font-size: 5vh;
+    position: absolute;
+    top: 15%;
+    left: 50%;  
+  }
+
+  #infos{
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    
+    margin: 15px 20px;
+  }
+  form{
+    margin-top: 10%;
+    width: 90%;
+    margin: 10px;
+  }
+  
+
+
+
+  
+
+}
